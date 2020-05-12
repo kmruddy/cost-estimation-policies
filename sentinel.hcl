@@ -3,5 +3,5 @@ module "aws-functions" {
 }
 
 policy "aws-costing" {
-    enforcement_level = "advisory"
+    enforcement_level = "hard-mandatory"
 }
