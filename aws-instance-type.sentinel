@@ -11,7 +11,7 @@ desired_instance_type = types[workspace_name]
 
 print("Checking to make sure the", workspace_name, "workspace is using a", desired_instance_type, "instance type")
 
-configured_instance_type = tfplan.resources.aws_instance.web.instance_type
+configured_instance_type = tfplan.resources.aws_instance.web.instance_type[0]
 
 print(configured_instance_type, "was the configured type")
 
