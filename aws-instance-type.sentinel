@@ -11,12 +11,13 @@ desired_instance_type = types["demo-site-prod"]
 
 print("Checking to make sure the", workspace_name, "workspace is using a", desired_instance_type, "instance type")
 
-# configured_instance_type = tfplan.module([]).resources.aws_instance.web.instance_type
+configured_instance_type = tfplan.module([]).resources.aws_instance.web.instance_type
 
-# print(configured_instance_type, "was the configured type")
+print(configured_instance_type, "was the configured type")
 
-paths = tfplan.module_paths
-print(paths)
+for tfplan.module_paths as path {
+    print(path)
+}
 
 main = rule {
     desired_instance_type == configured_instance_type
