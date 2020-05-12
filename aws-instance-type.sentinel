@@ -9,11 +9,11 @@ types = {
 workspace_name = tfrun.workspace.name
 desired_instance_type = types[workspace_name]
 
-Print("Checking to make sure the", workspace_name, "workspace is using a", desired_instance_type, "instance type")
+print("Checking to make sure the", workspace_name, "workspace is using a", desired_instance_type, "instance type")
 
 configured_instance_type = tfplan.resources.aws_instance.web.instance_type
 
-Print(configured_instance_type, "was the configured type")
+print(configured_instance_type, "was the configured type")
 
 main = rule {
     desired_instance_type == configured_instance_type
