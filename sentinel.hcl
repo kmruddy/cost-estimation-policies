@@ -1,7 +1,7 @@
-module "aws-functions" {
-    source = "./aws-costing.sentinel"
+policy "aws-costing" {
+    enforcement_level = "advisory"
 }
 
-policy "aws-costing" {
-    enforcement_level = "hard-mandatory"
+policy "aws-time" {
+    enforcement_level = "advisory"
 }
