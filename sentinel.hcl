@@ -1,6 +1,7 @@
-import "tfrun"
-import "decimal"
+module "aws-functions" {
+    source = "./aws.sentinel"
+}
 
-main = rule {
-    decimal.new(tfrun.cost_estimate.proposed_monthly_cost).less_than(10)
+policy "aws-costing" {
+    enforcement_level = "advisory"
 }
