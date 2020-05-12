@@ -7,7 +7,7 @@ types = {
 }
 
 workspace_name = tfrun.workspace.name
-desired_instance_type = types[workspace_name]
+desired_instance_type = types["demo-site-prod"]
 
 print("Checking to make sure the", workspace_name, "workspace is using a", desired_instance_type, "instance type")
 
