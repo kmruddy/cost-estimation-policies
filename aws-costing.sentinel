@@ -1,6 +1,20 @@
 import "tfrun"
 import "decimal"
 
-main = rule {
-    decimal.new(tfrun.cost_estimate.proposed_monthly_cost).less_than(10)
+import "tfrun"
+import "decimal"
+
+if tfrun.cost_estimate else null is null {
+    print("No cost estimates available")
+    return true
+} 
+
+proposed_monthly_cost = decimal.new(tfrun.cost_estimate.proposed_monthly_cost)   
+
+if proposed_monthly_cost.less_than(10) {
+    print("Proposed monthly cost", proposed_monthly_cost, "is less than the required amount.")
+    return true
+} else {
+    print("Proposed monthly cost", proposed_monthly_cost, "is more than the required amount.")
+    return false
 }
