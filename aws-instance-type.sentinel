@@ -7,12 +7,10 @@ types = {
 }
 
 workspace_name = tfrun.workspace.name
-desired_instance_type = types["demo-site-prod"]
+desired_instance_type = types["demo-site-dev"]
 
 print("Checking to make sure the", workspace_name, "workspace is using a", desired_instance_type, "instance type")
 
-# path = tfplan.module_paths[0]
-# configured_instance_type = tfplan.module(path).resources.aws_instance.web[0].applied.instance_type
 configured_instance_type = tfplan.module([]).resources.aws_instance.web[0].applied.instance_type
 
 print(configured_instance_type, "was the configured type")
