@@ -1,5 +1,5 @@
 module "aws-functions" {
-    source = "./aws.sentinel"
+    source = "./aws-costing.sentinel"
 }
 
 policy "aws-costing" {
