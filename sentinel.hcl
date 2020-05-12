@@ -1,7 +1,7 @@
 import "tfrun"
 import "decimal"
 
-if tfrun.cost_estimate else null is null {
+if tfrun.cost_estimate is null {
     print("No cost estimates available")
     return true
 } else {
