@@ -1,10 +1,10 @@
 import "tfrun"
 import "decimal"
 
-if tfrun.check_cost_estimate else null is null {
-    print("No cost estimate avilable")
-    return true
-}
+# if tfrun.check_cost_estimate else null is null {
+#     print("No cost estimate avilable")
+#     return true
+# }
 
 proposed_monthly_cost = decimal.new(tfrun.cost_estimate.proposed_monthly_cost)   
 
