@@ -7,7 +7,12 @@ instance_mappings = {
 }
 
 workspace_name = tfrun.workspace.name
-desired_instance_type = instance_mappings.workspace_name
+
+if workspace_name == "demo-site-prod" {
+    desired_instance_type = instance_mappings["demo-site-prod"]
+} else if workspace_name == "demo-site-dev" {
+    desired_instance_type = instance_mappings["demo-site-dev"]
+}
 
 print("Checking to make sure the", workspace_name, "workspace is using a", desired_instance_type, "instance type")
 
