@@ -1,13 +1,13 @@
 import "tfrun"
 import "tfplan"
 
-types = {
+instance_mappings = {
     "demo-site-prod": "t2.large",
     "demo-site-dev": "t2.micro",
 }
 
 workspace_name = tfrun.workspace.name
-desired_instance_type = types["workspace_name"]
+desired_instance_type = instance_mappings.workspace_name
 
 print("Checking to make sure the", workspace_name, "workspace is using a", desired_instance_type, "instance type")
 
