@@ -18,8 +18,6 @@ print("Checking to make sure the", workspace_name, "workspace is using a", desir
 
 configured_instance_type = tfplan.module([]).resources.aws_instance.web[0].applied.instance_type
 
-print(configured_instance_type, "was the configured type")
-
 main = rule {
     desired_instance_type == configured_instance_type
 }
