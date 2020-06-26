@@ -13,6 +13,8 @@ if workspace_name == "basic-site-prod" {
     desired_instance_type = instance_mappings["basic-site-prod"]
 } else if workspace_name == "basic-site-dev" {
     desired_instance_type = instance_mappings["basic-site-dev"]
+} else if workspace_name == "basic-site-demo" {
+    desired_instance_type = instance_mappings["basic-site-demo"]
 }
 
 print("Checking to make sure the", workspace_name, "workspace is using a", desired_instance_type, "instance type")
