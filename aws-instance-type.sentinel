@@ -3,7 +3,8 @@ import "tfplan"
 
 instance_mappings = {
     "basic-site-prod": "t2.large",
-    "basic-site-dev": "t2.micro",
+    "basic-site-dev":  "t2.micro",
+    "basic-site-demo": "t2.micro",
 }
 
 workspace_name = tfrun.workspace.name
