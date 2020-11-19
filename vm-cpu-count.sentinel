@@ -12,7 +12,7 @@ vsphere_vms = filter tfplan.resource_changes as _, resource_changes {
 
 vsphere_vm_cpu_count = rule {
     all vsphere_vms as _, vsphere_vm {
-        vsphere_vms.change.after.num_cpus is 1
+        vsphere_vms.change.after.num_cpus is desired_cpu_count
     }
 }
 
