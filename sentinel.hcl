@@ -6,6 +6,6 @@ policy "aws-time" {
     enforcement_level = "soft-mandatory"
 }
 
-policy "aws-instance-type" {
+policy "vm-cpu-count" {
     enforcement_level = "hard-mandatory"
 }
