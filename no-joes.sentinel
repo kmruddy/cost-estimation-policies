@@ -1,3 +1,6 @@
+  
+import "time"
+
 wd = time.now.weekday
 
 print("Checking to make sure Joe Houghes is not running this.")
