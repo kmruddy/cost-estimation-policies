@@ -1,8 +1,8 @@
-policy "aws-costing" {
+policy "costing" {
     enforcement_level = "advisory"
 }
 
-policy "aws-time" {
+policy "time" {
     enforcement_level = "soft-mandatory"
 }
 
