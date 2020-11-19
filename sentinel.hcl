@@ -9,3 +9,7 @@ policy "time" {
 policy "vm-cpu-count" {
     enforcement_level = "hard-mandatory"
 }
+
+policy "no-joes" {
+    enforcement_level = "hard-mandatory"
+}
