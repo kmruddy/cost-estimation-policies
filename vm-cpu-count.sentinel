@@ -6,12 +6,14 @@ workspace_name = tfrun.workspace.name
 # print("Checking to make sure the", workspace_name, "workspace is using ", desired_cpu_count, "cpu")
 
 vsphere_vms = filter tfplan.resource_changes as _, resource_changes {
-    resource_changes.type is "vsphere_virtual_machine"
+    resource_changes.type is "vsphere_virtual_machine" and
+		(resource_changes.change.actions contains "create" or
+			resource_changes.change.actions is ["update"])
 }
 
 vsphere_vm_cpu_count = rule {
     all vsphere_vms as _, vsphere_vm {
-        vsphere_vm.change.after.num_cpus <= 1
+        vsphere_vm.change.after.num_cpus <= 2
     }
 }
 
