@@ -6,7 +6,7 @@ desired_cpu_count = 1
 
 print("Checking to make sure the", workspace_name, "workspace is using ", desired_cpu_count, "cpu")
 
-configured_cpu_count = tfplan.module([]).resources.module.vsphere-emptyVM[0].vsphere_virtual_machine.new_vm.values.num_cpus
+configured_cpu_count = tfplan.planned_values.resources.module.vsphere-emptyVM[0].vsphere_virtual_machine.new_vm.values.num_cpus
 
 print(workspace_name, "workspace is requesting ", desired_cpu_count, "cpu")
 
