@@ -3,7 +3,7 @@ import "tfplan/v2" as tfplan
 
 workspace_name = tfrun.workspace.name
 
-print("Checking to make sure the", workspace_name, "workspace is using ", desired_cpu_count, "cpu")
+# print("Checking to make sure the", workspace_name, "workspace is using ", desired_cpu_count, "cpu")
 
 vsphere_vms = filter tfplan.resource_changes as _, resource_changes {
     resource_changes.type is "vsphere_virtual_machine"
